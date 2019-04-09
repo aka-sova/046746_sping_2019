@@ -1,0 +1,29 @@
+
+
+
+
+%% train the gaussian and laplasian
+
+
+
+parrots = imread('kodim23.png');
+parrot_gray = rgb2gray(parrots);
+
+% create a 2d filter
+sigma = 10;
+gaus_1 = imgaussfilt(parrot_gray,sigma);
+
+% laplasian
+lapl_1 = parrot_gray-gaus_1;
+
+
+num_layers = 3;
+gaussian_pyramid = make_guassian_pyramid(parrot_gray,num_layers);
+
+fig_11 = figure();
+subplot(3,1,1)
+
+
+
+
+
