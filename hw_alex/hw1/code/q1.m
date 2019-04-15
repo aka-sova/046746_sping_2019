@@ -133,8 +133,6 @@ rho_values = R(peaks(:,1));
 
 fprintf('\nDetected %2.0f peaks (lines) in the image \n\n', length(theta_values));
 
-
-
 fig34 = figure(34);
 imshow(building);
 hold on;
