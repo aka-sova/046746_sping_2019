@@ -6,7 +6,7 @@ clc
 
 image_I = imread('data/Inputs/imgs/0004_6.png');
 image_E = imread('data/Examples/imgs/6.png');
-background = imread('data/Examples/bgs/6.jpg');
+background = imread('data/Examples/bgs/21.jpg');
 mask = imread('data/Inputs/masks/0004_6.png');
 
 Reconstructed = Style_Trans(image_I, image_E);
