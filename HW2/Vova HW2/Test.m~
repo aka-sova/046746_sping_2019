@@ -1,0 +1,9 @@
+
+frames_match_1 = frames_1( : , keypoints_2( 1 , : ) );
+frames_match_2 = frames_2( : , keypoints_2( 2 , : ) );
+
+num_outlier = inf;
+
+indices = randperm( length(frames_match_1) , 6 );
+hom_matrix = affine_matches( frames_match_1 , frames_match_2 , [ indices ; indices ] );
+proj_all_points = hot_
