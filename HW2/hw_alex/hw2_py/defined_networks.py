@@ -5,6 +5,21 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 
+class Train_History():
+    def __init__(self, n_epochs, train_dataset_length):
+
+        self.train_losses = []
+        self.train_counter = []
+        self.test_losses = []
+        self.train_validation_losses = []
+        self.accuracy_hist_test = []
+        self.accuracy_hist_train = []
+        self.test_counter = [i*train_dataset_length for i in range(n_epochs + 1)]
+        self.test_counter_epoch = [i for i in range(n_epochs + 1)]
+        self.train_counter_epoch = []
+
+
+
 class given_net_1(nn.Module):
     def __init__(self):
         super(given_net_1, self).__init__()
