@@ -22,9 +22,25 @@ Stop_4 = imread('StopSign4.jpg');
 %% Q1 sift features
 
 [ frames_1 , desc_1 ] = sift( rgb2gray( Stop_1 ) );
+figure( 101 )
+marked = insertMarker( Stop_1 , [ frames_1( 1 , : ) ; frames_1( 2 , : ) ]' );
+imshow( marked )
+
 [ frames_2 , desc_2 ] = sift( rgb2gray( Stop_2 ) );
+figure( 102 )
+marked = insertMarker( Stop_2 , [ frames_2( 1 , : ) ; frames_2( 2 , : ) ]' );
+imshow( marked )
+
 [ frames_3 , desc_3 ] = sift( rgb2gray( Stop_3 ) );
+figure( 103 )
+marked = insertMarker( Stop_3 , [ frames_3( 1 , : ) ; frames_3( 2 , : ) ]' );
+imshow( marked )
+
 [ frames_4 , desc_4 ] = sift( rgb2gray( Stop_4 ) );
+figure( 104 )
+marked = insertMarker( Stop_4 , [ frames_4( 1 , : ) ; frames_4( 2 , : ) ]' );
+imshow( marked )
+
 
 %% Q2 sift matching
 
@@ -60,5 +76,33 @@ frames_match_41 = frames_1( : , keypoints_4( 1 , : ) );
 frames_match_42 = frames_4( : , keypoints_4( 2 , : ) );
 figure(404)
 plotmatches( double(Stop_1)/255 , double(Stop_4)/255 , frames_match_41 , frames_match_42 , [ in_4 ; in_4 ] )
+
+%% Q5
+
+int_2 = affine_transformation( Stop_1 , hom_2_max );
+figure(502)
+imshow( uint8( int_2 ) )
+
+int_3 = affine_transformation( Stop_1 , hom_3_max );
+figure(503)
+imshow( uint8( int_3 ) )
+
+int_4 = affine_transformation( Stop_1 , hom_4_max );
+figure(504)
+imshow( uint8( int_4 ) )
+
+%% Q6
+
+stitch_2 = stitch( Stop_2 , int_2 );
+figure(602)
+imshow( uint8( stitch_2 ) )
+
+stitch_3 = stitch( Stop_3 , int_3 );
+figure(603)
+imshow( uint8( stitch_3 ) )
+
+stitch_4 = stitch( Stop_4 , int_4 );
+figure(604)
+imshow( uint8( stitch_4 ) )
 
 return;
