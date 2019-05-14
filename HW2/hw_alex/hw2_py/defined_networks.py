@@ -99,7 +99,7 @@ class given_net_2(nn.Module):
         self.relu_3 = nn.ReLU()
 
         # layer 6
-        self.fc1 = nn.Linear(in_features=128, out_features=10)
+        self.fc1 = nn.Linear(in_features=72, out_features=10)
         self.SM1 = nn.Softmax(dim=1)
 
     def forward(self, x):
@@ -121,7 +121,7 @@ class given_net_2(nn.Module):
 
         # print(x.shape)
 
-        x = x.view(-1, 128)
+        x = x.view(-1, 72)
         x = self.fc1(x)
 
         # print(x.shape)

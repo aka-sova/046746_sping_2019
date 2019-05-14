@@ -1,0 +1,3 @@
+
+Final accuracy on validation: 98.58
+Final accuracy on training: 99.186

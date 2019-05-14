@@ -247,7 +247,7 @@ def perform_training_process(net, optimizer, n_epochs, hist_case, results_dirnam
 
 
 # General parameters, equal for all
-n_epochs = 2
+n_epochs = 8
 
 ### CASE 1 - LEARNING_RATE = 0.01, ERROR = CE
 name_case = 'lr_0_01_net_1_CE_'
@@ -303,7 +303,7 @@ plt.grid()
 fig.savefig(results_dirname + 'comparison' + '/accuracy_LR_1_2_3.png')
 
 
-### CASE 4 - Learning rate = 0.01, Loss func = L2_norm
+### CASE 4 - Learning rate = 0.01, Loss func 0= L2_norm
 name_case = 'lr_0_01_net_1_L2_norm_'
 net = given_net_1()
 optimizer = optim.SGD(net.parameters(), lr=0.01, momentum=0.5)
