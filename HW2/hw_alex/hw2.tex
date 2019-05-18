@@ -95,9 +95,14 @@ We choose 2 options for stride and padding:
 \begin{enumerate}
 \item $stride = 2, padding = 1$
 The image now has a dimensions of $9\times9$, and with a stride of 1 it gives an output dimensions: $3\times3$
-\newline
-\includegraphics[scale=0.8]{imgs/q_1_31.png}
-\newline
+\vskip 0.1in
+\begin{figure}
+	\includegraphics[scale=0.8]{imgs/q_1_31.png}
+	%\caption{}
+	%\label{}
+\end{figure}
+\vskip 0.1in
+
 Output result is the following:
 
 \begin{equation*}
@@ -113,9 +118,14 @@ Output result is the following:
 
 \item $stride = 1, padding = 2$
 The image now has a dimensions of $7\times7$, but with stride of 2 it fits with the filter. Output dimensions: $7\times7$
-\newline
-\includegraphics[scale=0.8]{imgs/q_1_32.png}
-\newline
+\vskip 0.1in
+\begin{figure}
+	\includegraphics[scale=0.8]{imgs/q_1_32.png}
+	%\caption{}
+	%\label{}
+\end{figure}
+\vskip 0.1in
+
 Output result is the following:
 
 \begin{equation*}
@@ -138,9 +148,15 @@ The code is provided in the appendix.
 \newpage
 \subsection{Question 2.}
 The architecture selected is the VGG16 architecture. The image found in the internet which describes the structure is the following:
-\newline
-\includegraphics[scale=0.6]{imgs/vgg_arc.PNG}
-\newline
+
+
+\vskip 0.1in
+\begin{figure}
+	\includegraphics[scale=0.6]{imgs/vgg_arc.PNG}
+	%\caption{}
+	%\label{}
+\end{figure}
+\vskip 0.1in
 
 Writing the exact outputs for every layer:
 
@@ -179,8 +195,17 @@ Fully connected & {[}4096X1000{]}        & N/A       & N/A    & {[}1X1X1000{]}  
 \newline
 \textbf{How to spot: }First of all, a researcher will notice that the accuracy of the model on the Test Dataset decreases, while the accuracy on the Training Set will still be increasing. The typical graph vizuasing error on the Test \& Training set may be seen, demonstrating this exact situation:
 \newline
-\includegraphics[scale=0.4]{imgs/overfit.PNG}
-\newline
+
+
+\vskip 0.1in
+\begin{figure}
+	\includegraphics[scale=0.4]{imgs/overfit.PNG}
+	%\caption{}
+	%\label{}
+\end{figure}
+\vskip 0.1in
+
+
 \textbf{How to avoid: }There are numerous way to avoid overfitting:
 \begin{enumerate}
 \item Stop the training before the accuracy for the validation set starts increasing. If the accuracy does not satisfy, find a better dataset / improve the network / apply other changes. Training for more time will worsen the situation.
@@ -218,8 +243,14 @@ the problem which arises in the intermediate layers during training because the 
 
 So, actually we force the input of a specific layer to have approximately the same distribution in every training step. The batch normalization is performed in 4 steps (image taken from the original article):
 
+
+
 \vskip 0.1in
-\includegraphics[scale=0.6]{imgs/batch_norm.PNG}
+\begin{figure}
+	\includegraphics[scale=0.6]{imgs/batch_norm.PNG}
+	%\caption{}
+	%\label{}
+\end{figure}
 \vskip 0.1in
 
 Steps are the following:
@@ -231,6 +262,348 @@ Steps are the following:
 \end{enumerate}
 
 \newpage
+
+
+
+\section{Wet section}
+
+\subsection{Question 1.}
+The question is being answered in parts, in the order which was requested in the homework booklet, but with the different answers numbers.
+
+\subsubsection{\textbf{a.}}
+\textbf{This subsection answers the steps 1-6. }
+\newline
+Network is the following:
+\begin{itemize}
+\item Network as defined in step 2
+\item Loss function = CE (Cross Entropy)
+\item Optimizer: SDGM (momentum = 0.5)
+\item Learning rate = 0.01
+\item Epochs = 8
+\item Training minibatch size = 128
+\item Training/validation split = 50000/10000.  (MNIST dataset includes 60000 examples)
+\end{itemize}
+
+Answering the step 5 question:
+
+\begin{enumerate}
+\item Loss value graphs:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_CE_/loss_value.png}
+	\captionof{figure}{Loss value as a function of the training examples seen}
+	\label{fig_1}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_CE_/loss_value_epoch.png}
+	\captionof{figure}{Loss value as a function of the Epoch number}
+	\label{fig_2}
+\end{minipage}
+\vskip 0.1in
+
+%	Those are figs : \ref{fig_1} \ref{fig_2}
+
+
+\item Classification accuracy graphs
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_CE_/accuracy.png}
+	\captionof{figure}{Classification accuracy as a function of the training examples seen}
+	\label{fig_3}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_CE_/accuracy_epoch.png}
+	\captionof{figure}{Classification accuracy as a function of the Epoch number}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\end{enumerate}
+
+Answering the step 6 question:
+The classification accuracy reported is the following:
+\begin{enumerate}
+\item Training set: 99.186\%
+\item Test set: 98.58 \%
+\end{enumerate}
+
+\newpage
+\subsubsection{\textbf{b.}}
+\textbf{This subsection answers the step 7 - part 1. }
+\newline
+First, we repeat the process with the different learning rate values, whereas all the other parameters defined in the previous subsection remain the same. And the results we get are the following:
+
+\begin{enumerate}
+\item For the same network with the learning rate of \textbf{0.1}:
+\begin{enumerate}
+\item Loss value graphs:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_1_net_1_CE_/loss_value.png}
+	\captionof{figure}{Loss vs. Training examples}
+	\label{fig_5}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_1_net_1_CE_/loss_value_epoch.png}
+	\captionof{figure}{Loss vs. Epoch number}
+	\label{fig_6}
+\end{minipage}
+\vskip 0.1in
+
+\item Classification accuracy graphs
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_1_net_1_CE_/accuracy.png}
+	\captionof{figure}{ Accuracy vs. Training examples}
+	\label{fig_7}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_1_net_1_CE_/accuracy_epoch.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_8}
+\end{minipage}
+\vskip 0.1in
+
+
+
+
+
+
+\end{enumerate}
+
+\item For the same network with the learning rate of \textbf{0.0001}:
+
+
+\begin{enumerate}
+
+\item Loss value graphs:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_0001_net_1_CE_/loss_value.png}
+	\captionof{figure}{Loss vs. Training examples}
+	\label{fig_9}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_0001_net_1_CE_/loss_value_epoch.png}
+	\captionof{figure}{Loss vs. Epoch number}
+	\label{fig_10}
+\end{minipage}
+\vskip 0.1in
+
+\item Classification accuracy graphs
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_0001_net_1_CE_/accuracy.png}
+	\captionof{figure}{ Accuracy vs. Training examples}
+	\label{fig_11}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_0001_net_1_CE_/accuracy_epoch.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_12}
+\end{minipage}
+\vskip 0.1in
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+Answering the question asked, we compare the results and then draw conclusions. First, We compare the final accuracy on the validation set for 3 of the networks:
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Network LR & Final test accuracy {[}\%{]} & Final training accuracy {[}\%{]} \\ \hline
+0.01       & 98.58                        & 99.186                           \\ \hline
+0.1        & 75.88                        & 76.036                           \\ \hline
+0.0001     & 96.94                        & 97.23                            \\ \hline
+\end{tabular}
+\end{table}
+
+
+Then, we compare the accuracy of those 3 networks vs. the learning rate:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{{hw2_py/results/_14_01_43/comparison/accuracy_LR_1_2_3.png}}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_13}
+\end{minipage}
+\vskip 0.1in
+
+
+Several conclusions can be drawn from the overall results:
+
+\begin{enumerate}
+\item As we can see, the learning can is a parameter which has to be tuned in order to obtain optimal results:
+\begin{enumerate}
+\item Small learning rate leads to a network which will take a lot of time to converge, and this convergence will slow down even more when the Loss will decrease. We can see it in the case with $\alpha=0.0001$
+\item Large learning rate may give a quick jump towards the optimal solution in the beginning, but the network may never converge, since the parameters will be changed very drastically, and the Loss will not decrease. We can see it in the case with $\alpha=0.1$ (which is high learning rate)
+\end{enumerate}
+There have been made a lot of research on this matter, and often the adaptive learning rate is being used. (which changes its value over time). From our example, over the given training time, the case with $\alpha = 0.01$ showed the best results
+\item As mentioned above, the small learning rate makes small changes to the network parameter, so that the Loss value changes in a smooth way (Figure \ref{fig_10}). Opposite is true for the high learning rate (Figure \ref{fig_6})
+\item As mentioned above, high learning rate will reach a point where is can no longer decrease the Loss value, since the changes made for the parameters are very big. This is visible good in the Figure \ref{fig_6}.
+\item In all the cases, we can observe that the accuracy on the validation set is slightly smaller than the one on the training set. Which is logical, the network copes better with the data it has already seen and was trained on.
+
+\end{enumerate}
+
+
+
+
+
+
+\newpage
+\subsubsection{\textbf{c.}}
+\textbf{This subsection answers the step 7 - part 2. }
+\newline
+First, we repeat the process with the the same learning rate ($\alpha = 0.01$), but with a different Loss Function, using the L2 Norm function as the loss value. Reporting the same results, we obtain the following Loss valueand the following Accuracy graphs:
+
+\begin{enumerate}
+
+\item Loss value graphs:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_L2_norm_/loss_value.png}
+	\captionof{figure}{Loss vs. Training examples}
+	\label{fig_14}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_L2_norm_/loss_value_epoch.png}
+	\captionof{figure}{Loss vs. Epoch number}
+	\label{fig_15}
+\end{minipage}
+\vskip 0.1in
+
+\item Classification accuracy graphs
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_L2_norm_/accuracy.png}
+	\captionof{figure}{ Accuracy vs. Training examples}
+	\label{fig_16}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/lr_0_01_net_1_L2_norm_/accuracy_epoch.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_17}
+\end{minipage}
+\vskip 0.1in
+
+
+
+\end{enumerate}
+
+Comparing the accuracy rate on the trained network for both cases gives:
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Network Loss function & Final test accuracy {[}\%{]} & Final training accuracy {[}\%{]} \\ \hline
+Cross Entropy         & 98.58                        & 99.186                           \\ \hline
+N2 norm               & 98.77                        & 99.514                           \\ \hline
+\end{tabular}
+\end{table}
+
+
+Then, we compare the accuracy of those 2 networks:
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_01_43/comparison/accuracy_1_4.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_18}
+\end{minipage}
+\vskip 0.1in
+
+
+
+Several conclusions can be drawn from the overall results:
+
+\begin{enumerate}
+\item As we can observe, there is no much difference in the performance of both networks, and both classify the validation examples approximately on the same level. Although this is the case in our example, choosing the correct Loss Function is vital for a successful Network training in other, more complex environments.
+\end{enumerate}
+
+
+\newpage
+\subsubsection{\textbf{d.}}
+\textbf{This subsection answers the step 8. }
+\newline
+First, we repeat the process with all the same parameters, but the network structure is different. The following results are being obtained (for the new network):
+
+\begin{enumerate}
+\item Loss value graphs:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_11_31/lr_0_01_net_2_CE_/loss_value.png}
+	\captionof{figure}{Loss vs. Training examples}
+	\label{fig_19}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_11_31/lr_0_01_net_2_CE_/loss_value_epoch.png}
+	\captionof{figure}{Loss vs. Epoch number}
+	\label{fig_20}
+\end{minipage}
+\vskip 0.1in
+
+\item Classification accuracy graphs
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_11_31/lr_0_01_net_2_CE_/accuracy.png}
+	\captionof{figure}{ Accuracy vs. Training examples}
+	\label{fig_21}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_11_31/lr_0_01_net_2_CE_/accuracy_epoch.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_22}
+\end{minipage}
+\vskip 0.1in
+
+\end{enumerate}
+
+
+Comparing the accuracy rate on the trained network for both cases gives:
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Network No. & Final test accuracy {[}\%{]} & Final training accuracy {[}\%{]} \\ \hline
+1           & 98.76                        & 99.25                            \\ \hline
+2           & 96.13                        & 96.52                            \\ \hline
+\end{tabular}
+\end{table}
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=0.8]{hw2_py/results/_14_11_31/comparison/accuracy_1_5.png}
+	\captionof{figure}{Accuracy vs. Epoch number}
+	\label{fig_18}
+\end{minipage}
+\vskip 0.1in
+Several conclusions can be drawn from the overall results:
+
+\begin{enumerate}
+\item As we can observe, the new network structure contains \textbf{less} parameters, which means, its performance abilities are smaller than from the network with more parameters. This is also one of the big considerations when creating the network architecture - finding the optimal amount of layers \& parameters / convolution size / etc. in each layer. From one side, the network should have enough parameters to supply the desired accuracy, from another side, an abundance of the parameters will lead to longer training time, and some other known problems (vanishing/exploding gradient, etc. ) 
+\end{enumerate}
 
 
 
