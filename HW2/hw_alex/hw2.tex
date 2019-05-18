@@ -19,6 +19,7 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 
+
 %\doublespacing
 % or:
 \onehalfspacing
@@ -604,6 +605,109 @@ Several conclusions can be drawn from the overall results:
 \begin{enumerate}
 \item As we can observe, the new network structure contains \textbf{less} parameters, which means, its performance abilities are smaller than from the network with more parameters. This is also one of the big considerations when creating the network architecture - finding the optimal amount of layers \& parameters / convolution size / etc. in each layer. From one side, the network should have enough parameters to supply the desired accuracy, from another side, an abundance of the parameters will lead to longer training time, and some other known problems (vanishing/exploding gradient, etc. ) 
 \end{enumerate}
+
+
+
+\newpage
+\subsection{Question 2.}
+\subsubsection{}
+We have used the MATLAB version of the network, out of its simplicity to comply with the required tasks in this question. 
+
+\subsubsection{}
+The bird images were loaded. Since their size differed from the input size to the VGG16 network ([224X224X3]), we had to resize them in order to fit into the network. This was done thoughtout the exercise without saving the Aspect Ratio of the images. The predictions for the birds are the following:
+
+\vskip 0.1in
+\begin{figure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bird_0_labeled.png}
+	\caption{Bird \#0 prediction}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bird_1_labeled.png}
+	\caption{Bird \#1 prediction}
+  \end{subfigure}
+\caption{Prediction on the input birds}
+\end{figure}
+\vskip 0.1in
+
+
+\subsubsection{}
+The random image on the web that we have found is the image of the bear. The image was resized as well and has produced the following classification output, which is correct. (it says "Brown bear") (See Figure  \ref{Bear prediction} )
+
+\vskip 0.1in
+\begin{figure}[h!]
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear.png}
+	\caption{Bear input image}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_classified.png}
+	\caption{Bear resized and classified}
+  \end{subfigure}
+\caption{Bear prediction}
+\label{Bear prediction}
+\end{figure}
+\vskip 0.1in
+
+\subsubsection{}
+The following transformations have been applied:
+
+\begin{enumerate}
+\item \textbf{Geometric transformation: } we have used the 'shear', which is represented by the following affine transformation matrix:
+
+\begin{equation*}
+\left[
+\begin{matrix}
+1 & 0 & 0 \\
+0.45 & 1 & 0 \\
+0 & 0 & 1
+\end{matrix}
+\right]
+\end{equation*}
+
+\item \textbf{Color transformation: } we have affected the Hue channel, multiplying its values by 2.5
+\item \textbf{Filter: } we used the Motion Blur filter defined in MATLAB, of size 20, with angle of 45 degrees
+\end{enumerate}
+
+The results are presented in the next image. As we can see, all the classifications are still correct, which signals that the network is robust enough to all those modifications. (See Figure  \ref{Bear modified predictions} )
+
+
+\vskip 0.1in
+\begin{figure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_sheared.png}
+	\caption{Bear sheared input image}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_sheared_classified.png}
+	\caption{Bear sheared classified}
+  \end{subfigure}
+
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_hue.png}
+	\caption{Modified color bear}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_hue_classified.png}
+	\caption{Modified color bear classified}
+  \end{subfigure}
+
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_blurred.png}
+	\caption{Blurred bear}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}
+	\includegraphics[width=\linewidth]{imgs/bear_blurred_classified.png}
+	\caption{Blurred bear classified}
+  \end{subfigure}
+
+
+\caption{Bear modifications and its prediction}
+\label{Bear modified predictions}
+\end{figure}
+\vskip 0.1in
+
+
 
 
 

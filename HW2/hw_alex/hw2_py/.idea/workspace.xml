@@ -11,14 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mnist_pytorch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mnist_pytorch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnist_pytorch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="267" column="36" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -26,10 +23,22 @@
       <file leaf-file-name="defined_networks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/defined_networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="121" column="23" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="-680">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
               <folding>
                 <element signature="e#2#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pretrained_net.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pretrained_net.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="228" column="21" lean-forward="true" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,10 +47,22 @@
       <file leaf-file-name="cifar10_pytorch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cifar10_pytorch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="366">
+              <caret line="113" column="27" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="27" />
               <folding>
                 <element signature="e#1#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw2_pytorch_practice.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2_pytorch_practice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding>
+                <element signature="e#2#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,6 +102,7 @@
       <find>train_losses</find>
       <find>train_losses.</find>
       <find>train_counter</find>
+      <find>plt</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -92,21 +114,21 @@
         <option value="$PROJECT_DIR$/cifar10_pytorch.py" />
         <option value="$PROJECT_DIR$/defined_networks.py" />
         <option value="$PROJECT_DIR$/mnist_pytorch.py" />
+        <option value="$PROJECT_DIR$/pretrained_net.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1996" />
-    <option name="y" value="341" />
-    <option name="width" value="1194" />
-    <option name="height" value="676" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,10 +136,22 @@
               <item name="hw2_py" type="b2602c69:ProjectViewProjectNode" />
               <item name="hw2_py" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hw2_py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw2_py" type="462c0819:PsiDirectoryNode" />
+              <item name="CNN Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw2_py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw2_py" type="462c0819:PsiDirectoryNode" />
+              <item name="CNN Images" type="462c0819:PsiDirectoryNode" />
+              <item name="birds" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,26 +273,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="1912" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20595238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12559524" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32827586" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5609221" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.08392857" side_tool="true" visible="true" weight="0.30186608" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.2788145" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.9160714" weight="0.22832052" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5609221" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956093" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956093" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="374" height="826" id="Documentation" side_tool="true" weight="0.3297619" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827586" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -273,6 +308,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mnist_pytorch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6205">
+          <caret line="365" lean-forward="true" selection-start-line="365" selection-end-line="365" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/defined_networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="23" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="23" />
+          <folding>
+            <element signature="e#2#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cifar10_pytorch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="e#1#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw2_pytorch_practice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -307,9 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -365,16 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cifar10_pytorch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/conda/conda/envs/py36/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -389,30 +438,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_pytorch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw2_pytorch_practice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="748">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding>
             <element signature="e#2#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cifar10_pytorch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="113" column="27" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="27" />
+          <folding>
+            <element signature="e#1#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/defined_networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="121" column="23" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="-680">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
           <folding>
             <element signature="e#2#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist_pytorch.py">
+    <entry file="file://$PROJECT_DIR$/pretrained_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="267" column="36" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
+        <state relative-caret-position="339">
+          <caret line="228" column="21" lean-forward="true" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

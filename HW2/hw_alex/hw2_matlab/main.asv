@@ -1,0 +1,33 @@
+
+
+
+
+% part 1: read the bird images
+% we need to transform the images so they would fit into the VGG16 input
+% which is 224*224
+% then normalize the inputs:
+%   a. first to double ([0 1])
+%   b. then to mean and var values specified for VGG16 input network
+% 
+
+% we simply rescale them 
+
+bird_pics = dir('CNN images/birds');
+
+% display the birds
+for i=1:length(bird_pics)
+    f
+   if  (~strcmp(bird_pics(i).name, '.') && ~strcmp(bird_pics(i).name, '..'))
+       fig(i) = figure();
+       bird = imread(strcat('CNN images/birds/',bird_pics(i).name));
+       imshow(bird);
+       title('Input bird 0');
+       
+       
+       
+       
+   end    
+end
+
+
+
