@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.26)  19 MAY 2019 00:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.26)  20 MAY 2019 20:02
 entering extended mode
 **C:/studies/046746_computer_vision/git/HW2/hw_alex/hw2.tex
 (C:/studies/046746_computer_vision/git/HW2/hw_alex/hw2.tex
@@ -1492,41 +1492,298 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 597--602
 [27 <C:/studies/046746_computer_vision/git/HW2/hw_alex/hw2_py/results/_14_11_31
 /lr_0_01_net_2_CE_/accuracy_epoch.png>] [28 <C:/studies/046746_computer_vision/
 git/HW2/hw_alex/hw2_py/results/_14_11_31/comparison/accuracy_1_5.png>]
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.620 \begin{figure}{\linewidth}
-                                
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.620 \begin{figure}{\linewidth}
-                                
-? 
 <imgs/bird_0_labeled.png, id=276, 307.1475pt x 253.69781pt>
 File: imgs/bird_0_labeled.png Graphic file (type png)
 <use imgs/bird_0_labeled.png>
-Package pdftex.def Info: imgs/bird_0_labeled.png  used on input line 623.
+Package pdftex.def Info: imgs/bird_0_labeled.png  used on input line 622.
 (pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
 <imgs/bird_1_labeled.png, id=277, 307.1475pt x 253.69781pt>
 File: imgs/bird_1_labeled.png Graphic file (type png)
 <use imgs/bird_1_labeled.png>
-Package pdftex.def Info: imgs/bird_1_labeled.png  used on input line 627.
+Package pdftex.def Info: imgs/bird_1_labeled.png  used on input line 626.
 (pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
 
-Package lastpage Warning: Rerun to get the references right on input line 635.
 
+LaTeX Warning: Reference `Bear prediction' on page 29 undefined on input line 6
+37.
 
-AED: lastpage setting LastPage
+<imgs/bear.png, id=278, 453.94594pt x 341.02406pt>
+File: imgs/bear.png Graphic file (type png)
+<use imgs/bear.png>
+Package pdftex.def Info: imgs/bear.png  used on input line 642.
+(pdftex.def)             Requested size: 181.18439pt x 136.1158pt.
+<imgs/bear_classified.png, id=279, 307.1475pt x 253.69781pt>
+File: imgs/bear_classified.png Graphic file (type png)
+<use imgs/bear_classified.png>
+Package pdftex.def Info: imgs/bear_classified.png  used on input line 646.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [29 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bird_0_labeled.png 
 (PNG copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bird_1_labe
 led.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 635.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 635.
+
+LaTeX Warning: Reference `Bear modified predictions' on page 30 undefined on in
+put line 675.
+
+<imgs/bear_sheared.png, id=291, 569.12625pt x 341.02406pt>
+File: imgs/bear_sheared.png Graphic file (type png)
+<use imgs/bear_sheared.png>
+Package pdftex.def Info: imgs/bear_sheared.png  used on input line 681.
+(pdftex.def)             Requested size: 181.18439pt x 108.56793pt.
+<imgs/bear_sheared_classified.png, id=292, 307.1475pt x 253.69781pt>
+File: imgs/bear_sheared_classified.png Graphic file (type png)
+<use imgs/bear_sheared_classified.png>
+Package pdftex.def Info: imgs/bear_sheared_classified.png  used on input line 6
+85.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_hue.png, id=293, 453.94594pt x 341.02406pt>
+File: imgs/bear_hue.png Graphic file (type png)
+<use imgs/bear_hue.png>
+Package pdftex.def Info: imgs/bear_hue.png  used on input line 690.
+(pdftex.def)             Requested size: 181.18439pt x 136.1158pt.
+<imgs/bear_hue_classified.png, id=294, 307.1475pt x 253.69781pt>
+File: imgs/bear_hue_classified.png Graphic file (type png)
+<use imgs/bear_hue_classified.png>
+Package pdftex.def Info: imgs/bear_hue_classified.png  used on input line 694.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_blurred.png, id=295, 453.94594pt x 341.02406pt>
+File: imgs/bear_blurred.png Graphic file (type png)
+<use imgs/bear_blurred.png>
+Package pdftex.def Info: imgs/bear_blurred.png  used on input line 699.
+(pdftex.def)             Requested size: 181.18439pt x 136.1158pt.
+<imgs/bear_blurred_classified.png, id=296, 307.1475pt x 253.69781pt>
+File: imgs/bear_blurred_classified.png Graphic file (type png)
+<use imgs/bear_blurred_classified.png>
+Package pdftex.def Info: imgs/bear_blurred_classified.png  used on input line 7
+03.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+
+LaTeX Warning: Reference `Filters' on page 30 undefined on input line 721.
+
+<imgs/filter_1.png, id=297, 467.49657pt x 148.30406pt>
+File: imgs/filter_1.png Graphic file (type png)
+<use imgs/filter_1.png>
+Package pdftex.def Info: imgs/filter_1.png  used on input line 727.
+(pdftex.def)             Requested size: 271.7835pt x 86.22232pt.
+<imgs/filter_2.png, id=298, 459.96844pt x 148.30406pt>
+File: imgs/filter_2.png Graphic file (type png)
+<use imgs/filter_2.png>
+Package pdftex.def Info: imgs/filter_2.png  used on input line 733.
+(pdftex.def)             Requested size: 271.7835pt x 87.6344pt.
+
+LaTeX Warning: Reference `Filters_responses' on page 30 undefined on input line
+ 743.
+
+[30 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bear.png (PNG copy)
+> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bear_classified.png (
+PNG copy)>] [31 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bear_sh
+eared.png (PNG copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/b
+ear_sheared_classified.png (PNG copy)> <C:/studies/046746_computer_vision/git/H
+W2/hw_alex/imgs/bear_hue.png (PNG copy)> <C:/studies/046746_computer_vision/git
+/HW2/hw_alex/imgs/bear_hue_classified.png (PNG copy)> <C:/studies/046746_comput
+er_vision/git/HW2/hw_alex/imgs/bear_blurred.png (PNG copy)> <C:/studies/046746_
+computer_vision/git/HW2/hw_alex/imgs/bear_blurred_classified.png (PNG copy)>]
+<imgs/response_filt_1.png, id=313, 307.1475pt x 253.69781pt>
+File: imgs/response_filt_1.png Graphic file (type png)
+<use imgs/response_filt_1.png>
+Package pdftex.def Info: imgs/response_filt_1.png  used on input line 750.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/response_filt_2.png, id=314, 307.1475pt x 253.69781pt>
+File: imgs/response_filt_2.png Graphic file (type png)
+<use imgs/response_filt_2.png>
+Package pdftex.def Info: imgs/response_filt_2.png  used on input line 754.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_sheared_filtered_1.png, id=315, 307.1475pt x 253.69781pt>
+File: imgs/bear_sheared_filtered_1.png Graphic file (type png)
+<use imgs/bear_sheared_filtered_1.png>
+Package pdftex.def Info: imgs/bear_sheared_filtered_1.png  used on input line 7
+60.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_sheared_filtered_2.png, id=316, 307.1475pt x 253.69781pt>
+File: imgs/bear_sheared_filtered_2.png Graphic file (type png)
+<use imgs/bear_sheared_filtered_2.png>
+Package pdftex.def Info: imgs/bear_sheared_filtered_2.png  used on input line 7
+64.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_hued_filtered_1.png, id=317, 307.1475pt x 253.69781pt>
+File: imgs/bear_hued_filtered_1.png Graphic file (type png)
+<use imgs/bear_hued_filtered_1.png>
+Package pdftex.def Info: imgs/bear_hued_filtered_1.png  used on input line 769.
+
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_hued_filtered_2.png, id=318, 307.1475pt x 253.69781pt>
+File: imgs/bear_hued_filtered_2.png Graphic file (type png)
+<use imgs/bear_hued_filtered_2.png>
+Package pdftex.def Info: imgs/bear_hued_filtered_2.png  used on input line 773.
+
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_blurred_filtered_1.png, id=319, 307.1475pt x 253.69781pt>
+File: imgs/bear_blurred_filtered_1.png Graphic file (type png)
+<use imgs/bear_blurred_filtered_1.png>
+Package pdftex.def Info: imgs/bear_blurred_filtered_1.png  used on input line 7
+78.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+<imgs/bear_blurred_filtered_2.png, id=320, 307.1475pt x 253.69781pt>
+File: imgs/bear_blurred_filtered_2.png Graphic file (type png)
+<use imgs/bear_blurred_filtered_2.png>
+Package pdftex.def Info: imgs/bear_blurred_filtered_2.png  used on input line 7
+82.
+(pdftex.def)             Requested size: 181.18439pt x 149.65718pt.
+
+
+LaTeX Warning: Float too large for page by 42.62181pt on input line 789.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 795--795
+[][]\OT1/cmr/m/n/10 https://www.mathworks.com/help/deeplearning/examples/visual
+ize-features-of-a-convolutional-
+ []
+
+
+LaTeX Warning: Reference `PC_graphs' on page 32 undefined on input line 809.
+
+[32 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/filter_1.png> <C:/s
+tudies/046746_computer_vision/git/HW2/hw_alex/imgs/filter_2.png>] [33 <C:/studi
+es/046746_computer_vision/git/HW2/hw_alex/imgs/response_filt_1.png (PNG copy)> 
+<C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/response_filt_2.png (PN
+G copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bear_sheared_f
+iltered_1.png (PNG copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/im
+gs/bear_sheared_filtered_2.png (PNG copy)> <C:/studies/046746_computer_vision/g
+it/HW2/hw_alex/imgs/bear_hued_filtered_1.png (PNG copy)> <C:/studies/046746_com
+puter_vision/git/HW2/hw_alex/imgs/bear_hued_filtered_2.png (PNG copy)> <C:/stud
+ies/046746_computer_vision/git/HW2/hw_alex/imgs/bear_blurred_filtered_1.png (PN
+G copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/bear_blurred_f
+iltered_2.png (PNG copy)>]
+<imgs/scatter_2d_pca.png, id=339, 526.96875pt x 395.22656pt>
+File: imgs/scatter_2d_pca.png Graphic file (type png)
+<use imgs/scatter_2d_pca.png>
+Package pdftex.def Info: imgs/scatter_2d_pca.png  used on input line 815.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+<imgs/scatter_3d_pca.png, id=340, 526.96875pt x 395.22656pt>
+File: imgs/scatter_3d_pca.png Graphic file (type png)
+<use imgs/scatter_3d_pca.png>
+Package pdftex.def Info: imgs/scatter_3d_pca.png  used on input line 821.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+
+LaTeX Warning: Reference `a Cat and a Dog new images' on page 34 undefined on i
+nput line 831.
+
+
+LaTeX Warning: Reference `new Cat and Dog images in PC scores graphs' on page 3
+4 undefined on input line 831.
+
+
+LaTeX Warning: Reference `closest_cat_dog_images' on page 34 undefined on input
+ line 831.
+
+<imgs/cat.jpg, id=341, 274.02374pt x 236.68425pt>
+File: imgs/cat.jpg Graphic file (type jpg)
+<use imgs/cat.jpg>
+Package pdftex.def Info: imgs/cat.jpg  used on input line 837.
+(pdftex.def)             Requested size: 219.21928pt x 189.34766pt.
+<imgs/dog.jpg, id=342, 602.25pt x 602.25pt>
+File: imgs/dog.jpg Graphic file (type jpg)
+<use imgs/dog.jpg>
+Package pdftex.def Info: imgs/dog.jpg  used on input line 842.
+(pdftex.def)             Requested size: 481.80064pt x 481.80064pt.
+<imgs/scatter_2d_new_imgs.png, id=343, 526.96875pt x 395.22656pt>
+File: imgs/scatter_2d_new_imgs.png Graphic file (type png)
+<use imgs/scatter_2d_new_imgs.png>
+Package pdftex.def Info: imgs/scatter_2d_new_imgs.png  used on input line 854.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+<imgs/scatter_3d_new_imgs.png, id=344, 743.02594pt x 434.37282pt>
+File: imgs/scatter_3d_new_imgs.png Graphic file (type png)
+<use imgs/scatter_3d_new_imgs.png>
+Package pdftex.def Info: imgs/scatter_3d_new_imgs.png  used on input line 860.
+(pdftex.def)             Requested size: 362.37569pt x 211.85034pt.
+File: imgs/cat.jpg Graphic file (type jpg)
+<use imgs/cat.jpg>
+Package pdftex.def Info: imgs/cat.jpg  used on input line 873.
+(pdftex.def)             Requested size: 219.21928pt x 189.34766pt.
+<imgs/cat_8.jpg, id=345, 276.03125pt x 183.68625pt>
+File: imgs/cat_8.jpg Graphic file (type jpg)
+<use imgs/cat_8.jpg>
+Package pdftex.def Info: imgs/cat_8.jpg  used on input line 878.
+(pdftex.def)             Requested size: 220.82529pt x 146.94917pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.879 		\caption{cat from library (cat_8)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.879 		\caption{cat from library (cat_8)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.879 		\caption{cat from library (cat_8)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.879 		\caption{cat from library (cat_8)}
+                                          
+? 
+File: imgs/dog.jpg Graphic file (type jpg)
+<use imgs/dog.jpg>
+Package pdftex.def Info: imgs/dog.jpg  used on input line 884.
+(pdftex.def)             Requested size: 481.80064pt x 481.80064pt.
+<imgs/dog_5.jpg, id=346, 301.125pt x 168.63pt>
+File: imgs/dog_5.jpg Graphic file (type jpg)
+<use imgs/dog_5.jpg>
+Package pdftex.def Info: imgs/dog_5.jpg  used on input line 889.
+(pdftex.def)             Requested size: 240.90031pt x 134.90417pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.890 		\caption{dog from library (dog_5)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.890 		\caption{dog from library (dog_5)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.890 		\caption{dog from library (dog_5)}
+                                          
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.890 		\caption{dog from library (dog_5)}
+                                          
+? 
+
+Package lastpage Warning: Rerun to get the references right on input line 917.
+
+
+AED: lastpage setting LastPage
+[34] [35 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/scatter_2d_pca
+.png (PNG copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/scatte
+r_3d_pca.png (PNG copy)>] [36 <C:/studies/046746_computer_vision/git/HW2/hw_ale
+x/imgs/cat.jpg> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/dog.jpg
+>] [37 <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/scatter_2d_new_i
+mgs.png (PNG copy)> <C:/studies/046746_computer_vision/git/HW2/hw_alex/imgs/sca
+tter_3d_new_imgs.png (PNG copy)>] [38 <C:/studies/046746_computer_vision/git/HW
+2/hw_alex/imgs/cat_8.jpg> <C:/studies/046746_computer_vision/git/HW2/hw_alex/im
+gs/dog_5.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 917.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 917.
  (hw2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 635.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 635.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 917.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 917.
 
 
 Package rerunfilecheck Warning: File `hw2.out' has changed.
@@ -1535,7 +1792,7 @@ Package rerunfilecheck Warning: File `hw2.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `hw2.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  05AE788FABFC1199E21DE8DAA8E9AE2B;1088.
+(rerunfilecheck)             After:  2B603AFAFFACDF1A77699BB7C01B08E2;1389.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1545,18 +1802,21 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 635.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 917.
  ) 
 Here is how much of TeX's memory you used:
- 22433 strings out of 492897
- 413077 string characters out of 3133459
- 489406 words of memory out of 3000000
- 25792 multiletter control sequences out of 15000+200000
- 15760 words of font info for 67 fonts, out of 3000000 for 9000
+ 22610 strings out of 492897
+ 417160 string characters out of 3133459
+ 489408 words of memory out of 3000000
+ 25912 multiletter control sequences out of 15000+200000
+ 17492 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,56p,676b,566s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
+ 55i,10n,56p,816b,566s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1573,9 +1833,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
 lic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb>
-Output written on hw2.pdf (29 pages, 1004930 bytes).
+Output written on hw2.pdf (38 pages, 2881607 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 447 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 
