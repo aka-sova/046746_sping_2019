@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.14)  13 MAY 2019 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.14)  20 MAY 2019 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,76 +930,73 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 47.
 \c@lstlisting=\count156
-LaTeX Font Info:    Try loading font information for U+msa on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
-<101.jpg, id=24, 540.0175pt x 456.70625pt>
+<101.jpg, id=36, 540.0175pt x 456.70625pt>
 File: 101.jpg Graphic file (type jpg)
 <use 101.jpg>
 Package pdftex.def Info: 101.jpg  used on input line 75.
 (pdftex.def)             Requested size: 104.18068pt x 88.10611pt.
-<102.jpg, id=25, 852.18375pt x 729.72626pt>
+<102.jpg, id=37, 852.18375pt x 729.72626pt>
 File: 102.jpg Graphic file (type jpg)
 <use 102.jpg>
 Package pdftex.def Info: 102.jpg  used on input line 81.
 (pdftex.def)             Requested size: 104.18068pt x 89.20016pt.
-<103.jpg, id=26, 1043.9pt x 739.76375pt>
+<103.jpg, id=38, 1043.9pt x 739.76375pt>
 File: 103.jpg Graphic file (type jpg)
 <use 103.jpg>
 Package pdftex.def Info: 103.jpg  used on input line 87.
 (pdftex.def)             Requested size: 104.18068pt x 73.82268pt.
-<104.jpg, id=27, 1247.66125pt x 808.01875pt>
+<104.jpg, id=39, 1247.66125pt x 808.01875pt>
 File: 104.jpg Graphic file (type jpg)
 <use 104.jpg>
 Package pdftex.def Info: 104.jpg  used on input line 93.
 (pdftex.def)             Requested size: 104.18068pt x 67.46623pt.
-<202.jpg, id=30, 562.1pt x 421.575pt>
+<202.jpg, id=42, 562.1pt x 421.575pt>
 File: 202.jpg Graphic file (type jpg)
 <use 202.jpg>
 Package pdftex.def Info: 202.jpg  used on input line 109.
 (pdftex.def)             Requested size: 144.95303pt x 108.71275pt.
-<203.jpg, id=31, 562.1pt x 421.575pt>
+<203.jpg, id=43, 562.1pt x 421.575pt>
 File: 203.jpg Graphic file (type jpg)
 <use 203.jpg>
 Package pdftex.def Info: 203.jpg  used on input line 115.
 (pdftex.def)             Requested size: 144.95303pt x 108.71275pt.
-<204.jpg, id=32, 552.0625pt x 421.575pt>
+<204.jpg, id=44, 552.0625pt x 421.575pt>
 File: 204.jpg Graphic file (type jpg)
 <use 204.jpg>
 Package pdftex.def Info: 204.jpg  used on input line 121.
 (pdftex.def)             Requested size: 144.95303pt x 110.69403pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./101.jpg> <./102.jpg> <./
+103.jpg> <./104.jpg> <./202.jpg> <./203.jpg> <./204.jpg>]
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 135.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./101.jpg> <./102.jpg> <./
-103.jpg> <./104.jpg>]
 LaTeX Font Info:    Calculating math sizes for size <> on input line 157.
-
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
 (Font)              size <5> substituted on input line 157.
@@ -1072,54 +1069,53 @@ LaTeX Font Warning: Font shape `U/wasy/m/n' in size <0.7> not available
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <0.5> not available
 (Font)              size <5> substituted on input line 157.
 
-<402.jpg, id=52, 552.0625pt x 421.575pt>
+<402.jpg, id=60, 552.0625pt x 421.575pt>
 File: 402.jpg Graphic file (type jpg)
 <use 402.jpg>
 Package pdftex.def Info: 402.jpg  used on input line 166.
 (pdftex.def)             Requested size: 144.95303pt x 110.69403pt.
-<403.jpg, id=53, 562.1pt x 421.575pt>
+<403.jpg, id=61, 562.1pt x 421.575pt>
 File: 403.jpg Graphic file (type jpg)
 <use 403.jpg>
 Package pdftex.def Info: 403.jpg  used on input line 172.
 (pdftex.def)             Requested size: 144.95303pt x 108.71275pt.
-<404.jpg, id=54, 562.1pt x 421.575pt>
+<404.jpg, id=62, 562.1pt x 421.575pt>
 File: 404.jpg Graphic file (type jpg)
 <use 404.jpg>
 Package pdftex.def Info: 404.jpg  used on input line 178.
 (pdftex.def)             Requested size: 144.95303pt x 108.71275pt.
-[2 <./202.jpg> <./203.jpg> <./204.jpg> <./402.jpg> <./403.jpg> <./404.jpg>]
-<502.jpg, id=69, 807.015pt x 528.97626pt>
+<502.jpg, id=64, 807.015pt x 528.97626pt>
 File: 502.jpg Graphic file (type jpg)
 <use 502.jpg>
 Package pdftex.def Info: 502.jpg  used on input line 194.
 (pdftex.def)             Requested size: 144.95303pt x 95.00983pt.
-<503.jpg, id=70, 1015.795pt x 842.14626pt>
+<503.jpg, id=65, 1015.795pt x 842.14626pt>
 File: 503.jpg Graphic file (type jpg)
 <use 503.jpg>
 Package pdftex.def Info: 503.jpg  used on input line 200.
 (pdftex.def)             Requested size: 144.95303pt x 120.17413pt.
-<504.jpg, id=71, 815.045pt x 718.685pt>
+<504.jpg, id=66, 815.045pt x 718.685pt>
 File: 504.jpg Graphic file (type jpg)
 <use 504.jpg>
 Package pdftex.def Info: 504.jpg  used on input line 206.
 (pdftex.def)             Requested size: 144.95303pt x 127.81148pt.
-<602.jpg, id=73, 842.14626pt x 729.72626pt>
+[2 <./402.jpg> <./403.jpg> <./404.jpg>]
+<602.jpg, id=82, 842.14626pt x 729.72626pt>
 File: 602.jpg Graphic file (type jpg)
 <use 602.jpg>
 Package pdftex.def Info: 602.jpg  used on input line 222.
 (pdftex.def)             Requested size: 144.95303pt x 125.59955pt.
-<603.jpg, id=74, 1053.9375pt x 739.76375pt>
+<603.jpg, id=83, 1053.9375pt x 739.76375pt>
 File: 603.jpg Graphic file (type jpg)
 <use 603.jpg>
 Package pdftex.def Info: 603.jpg  used on input line 228.
 (pdftex.def)             Requested size: 144.95303pt x 101.73758pt.
-<604.jpg, id=75, 1257.69875pt x 808.01875pt>
+<604.jpg, id=84, 1257.69875pt x 808.01875pt>
 File: 604.jpg Graphic file (type jpg)
 <use 604.jpg>
 Package pdftex.def Info: 604.jpg  used on input line 234.
 (pdftex.def)             Requested size: 144.95303pt x 93.12363pt.
-
-
+ 
 AED: lastpage setting LastPage
 [3 <./502.jpg> <./503.jpg> <./504.jpg> <./602.jpg> <./603.jpg> <./604.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
@@ -1128,15 +1124,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
 (./cv_hw2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package rerunfilecheck Info: File `cv_hw2.out' has not changed.
+(rerunfilecheck)             Checksum: 9FD012801D30A0998D0C8FFB5C60C654;388.
 
-
-Package rerunfilecheck Warning: File `cv_hw2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cv_hw2.out':
-(rerunfilecheck)             Before: 1C8AF582B562F33DA495856DA7F62994;223
-(rerunfilecheck)             After:  9FD012801D30A0998D0C8FFB5C60C654;388.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1144,29 +1134,28 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 21458 strings out of 492982
- 392794 string characters out of 6134895
- 467168 words of memory out of 5000000
- 24591 multiletter control sequences out of 15000+600000
- 15033 words of font info for 63 fonts, out of 8000000 for 9000
+ 21459 strings out of 492982
+ 392818 string characters out of 6134895
+ 466168 words of memory out of 5000000
+ 24593 multiletter control sequences out of 15000+600000
+ 14674 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,56p,588b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,56p,590b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
-2.pfb>
-Output written on cv_hw2.pdf (3 pages, 1565154 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on cv_hw2.pdf (3 pages, 1552282 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 131 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  17 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
