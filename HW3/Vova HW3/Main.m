@@ -2,9 +2,9 @@ clear
 close all
 clc
 
-%% Part 1
+%% Part 1; display optical flow arrows in the middle of their designated square
 
-gif = imread('seq.gif', 'Frames', 'all');
+[ gif , cmap ] = imread('seq.gif', 'Frames', 'all');
 
 gif_size = size( gif );
 K = 16;
@@ -14,12 +14,13 @@ opt_flow_mat = optical_flow_creator( gif , K , t_limit );
 
 figure(101)
 display_time = 1;
-imshow( gif( : , : , : , display_time ) )
+imshow( gif( : , : , : , display_time ) );
 hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
 
 figure(102)
 display_time = 10;
@@ -29,6 +30,7 @@ x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
 
 figure(103)
 display_time = 20;
@@ -38,6 +40,7 @@ x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
 
 figure(104)
 display_time = 30;
@@ -47,6 +50,7 @@ x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
 
 figure(105)
 display_time = 40;
@@ -56,6 +60,7 @@ x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
 
 %% Part 3
 
@@ -212,5 +217,7 @@ x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
 quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+hold off
+
 
 return;
