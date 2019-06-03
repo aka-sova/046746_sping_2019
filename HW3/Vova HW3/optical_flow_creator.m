@@ -28,10 +28,10 @@ for t = 1 : 1 : gif_size( 4 ) - 1
                     % Computing Ix
                     if k_x == 1 + idx_x * K
                         A_matrix( k_x + ( k_y - 1 ) * K , 1 ) =...
-                            ( gif( 2 , k_y , 1 , t ) - gif( 1 , k_y , 1 , t ) ) / 1;
+                            ( gif( k_x + 1 , k_y , 1 , t ) - gif( k_x , k_y , 1 , t ) ) / 1;
                     elseif k_x == K + idx_x * K
                         A_matrix( k_x + ( k_y - 1 ) * K , 1 ) =...
-                            ( gif( K , k_y , 1 , t ) - gif( K - 1 , k_y , 1 , t ) ) / 1;
+                            ( gif( k_x , k_y , 1 , t ) - gif( k_x - 1 , k_y , 1 , t ) ) / 1;
                     else
                         A_matrix( k_x + ( k_y - 1 ) * K , 1 ) =...
                             gif( k_x + 1 , k_y , 1 , t ) / 2 - gif( k_x - 1 , k_y , 1 , t ) / 2;
@@ -40,10 +40,10 @@ for t = 1 : 1 : gif_size( 4 ) - 1
                     % Computing Iy
                     if k_y == 1 + idx_y * K
                         A_matrix( k_x + ( k_y - 1 ) * K , 2 ) =...
-                            ( gif( k_x , 2 , 1 , t ) - gif( k_x , 1 , 1 , t ) ) / 1;
+                            ( gif( k_x , k_y + 1 , 1 , t ) - gif( k_x , k_y , 1 , t ) ) / 1;
                     elseif k_y == K + idx_y * K
                         A_matrix( k_x + ( k_y - 1 ) * K , 2 ) =...
-                            ( gif( k_x , K , 1 , t ) - gif( k_x , K - 1 , 1 , t ) ) / 1;
+                            ( gif( k_x , k_y , 1 , t ) - gif( k_x , k_y - 1 , 1 , t ) ) / 1;
                     else
                         A_matrix( k_x + ( k_y - 1 ) * K , 2 ) =...
                             gif( k_x , k_y + 1 , 1 , t ) / 2 - gif( k_x , k_y - 1 , 1 , t ) / 2;
@@ -51,7 +51,7 @@ for t = 1 : 1 : gif_size( 4 ) - 1
 
                     % Computing It
                     b_vector( k_x + ( k_y - 1 ) * K ) =...
-                        ( gif( k_x , k_y , 1 , t + 1 ) - gif( k_x , k_y , 1 , t ) ) / 1;
+                        - ( gif( k_x , k_y , 1 , t + 1 ) - gif( k_x , k_y , 1 , t ) ) / 1;
 
                 end
             end
@@ -60,7 +60,7 @@ for t = 1 : 1 : gif_size( 4 ) - 1
             eigen_AtA = eig( A_matrix' * A_matrix ); 
 
             % Computing optical flow
-            if min( eigen_AtA ) >= t_limit * 256
+            if min( eigen_AtA ) >= t_limit * 256^2
                 optical_flow_matrix( idx_x + 1 , idx_y + 1 , t , : ) = ( A_matrix' * A_matrix )^(-1) * A_matrix' * b_vector;
             end
         
