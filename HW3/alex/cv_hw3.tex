@@ -217,10 +217,99 @@ We need aditional information to determine the distance of the ball. This inform
 %\end{equation*}
 
 
-
-
+\newpage
 \section{Depth with Stereo}
+\subsection{Disparity map explanation}
+Disparity (x-x') map shows the depth of the image. The depth of a point is inversely proportional to the difference in the distance of 2 corresponding image pixels. The farther the object - the less movement it undergoes if the camera center moves. Using the dislocation of each pixel relatively to its previous location, we build the disparity map. 
 
+
+
+\subsection{Window matching}
+The function was implemented - it can be found in 'calc\_SSD.m'. At first, the blockproc function was used. But the calculation times were too high, so it was replaced by another algorithm.
+
+
+\subsection{Finding the corresponding pixels}
+Rectification of the images reduces the number of the unknown parameters in the Excentric (E) matrix. We currently have no more rotation, only the translation of the camera center. This implies that the corresponding points have the same y coordinate (vertical / row number).
+\newline
+The function was written called 'find\_matching\_pixels', which does all of the mentioned in the question. It receives 2 images, an array of points in the first image, and the template size. It returns the array of points in the second image.
+
+\subsection{Constructing the disparity map}
+The function was written due to requirements. Called 'find\_disparity'.
+
+
+\subsection{Experiments}
+The function was executed on all of the examples, and all of the window sizes. Those are the results:
+
+
+%% for Image 1, window sizes [5 11 21]:
+
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_03_template_1.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_03_template_2.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_03_template_3.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_04_template_1.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_04_template_2.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_04_template_3.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_07_template_1.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_07_template_2.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+\begin{minipage}{\linewidth}
+	\includegraphics[scale=1]{results/04_16_06/disp_map_07_template_3.png}
+	%\captionof{figure}{}
+	\label{fig_4}
+\end{minipage}
+\vskip 0.1in
+
+%% for Image 2, window sizes [5 11 21]:
+
+
+%% for Image 3, window sizes [5 11 21]:
+
+Finding the RMSE for all 3 images and all 3 window sizes gives:
+
+%% Table 
+
+
+We can observe that for window size of 11 the performance is the best. The window 5 is affected by noise too much. While the window size of 21 blurs the image too much. The problematic regions are the regions of uniform background, or those who change less in the X direction. The algorithm performs best on the edges, which are easier to detect using the SSD algorithm.
 
 
 \end{document}
