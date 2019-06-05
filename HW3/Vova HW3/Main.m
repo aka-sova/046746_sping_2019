@@ -19,7 +19,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 figure(102)
@@ -29,7 +29,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 figure(103)
@@ -39,7 +39,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 figure(104)
@@ -49,7 +49,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 figure(105)
@@ -59,7 +59,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 %% Part 3
@@ -76,7 +76,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(302)
 display_time = 10;
@@ -85,7 +85,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(303)
 display_time = 20;
@@ -94,7 +94,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(304)
 display_time = 30;
@@ -103,7 +103,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(305)
 display_time = 40;
@@ -112,7 +112,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 %% Part 4a
 
@@ -128,7 +128,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(402)
 display_time = 10;
@@ -137,7 +137,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(403)
 display_time = 20;
@@ -146,7 +146,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(404)
 display_time = 30;
@@ -155,7 +155,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(405)
 display_time = 40;
@@ -164,7 +164,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 %% Part 4b
 
@@ -180,7 +180,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(407)
 display_time = 10;
@@ -189,7 +189,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(408)
 display_time = 20;
@@ -198,7 +198,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(409)
 display_time = 30;
@@ -207,7 +207,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 
 figure(410)
 display_time = 40;
@@ -216,7 +216,7 @@ hold on
 x_mesh_cd = K / 2 : K : ceil( gif_size( 1 ) - K / 2 );
 y_mesh_cd = K / 2 : K : ceil( gif_size( 2 ) - K / 2 );
 [ x_grid , y_grid ] = meshgrid( x_mesh_cd , y_mesh_cd );
-quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 1 ) , opt_flow_mat( : , : , display_time , 2 ) , 'Color' , 'r' );
+quiver( x_grid , y_grid , opt_flow_mat( : , : , display_time , 2 ) , opt_flow_mat( : , : , display_time , 1 ) , 'Color' , 'r' );
 hold off
 
 
