@@ -67,7 +67,7 @@ formatOut = 'dd_hh_mm';
 t = datestr(datetime('now','TimeZone','Asia/Jerusalem'),formatOut);
 mkdir(strcat('results/',t));
 
-DisparityMax = 60;
+DisparityMax = 30;
 
 for im_idx = 1:length(im_names)
     
@@ -81,8 +81,12 @@ for im_idx = 1:length(im_names)
     I_left = imread(left_im_addr);
     I_right = imread(right_im_addr);
     
-%     I_left = imresize(I_left,0.3);
-%     I_right = imresize(I_right,0.3);
+
+
+    % load the groundtruth to calc the RMSE
+    truth_addr = strcat('groundtruth/test',im_name,'.mat');
+    load(truth_addr);
+    
     
     for temp_size_idx=1 : length(template_sizes)
 
@@ -108,11 +112,19 @@ for im_idx = 1:length(im_names)
         fig_filename = strcat('results/',t,'/disp_map_',im_name,'_template_',num2str(temp_size_idx),'.png');
         saveas(fig1,fig_filename)
         close(fig1);
+        
+
+%         disp_addr = strcat('results/04_16_06/disp_map_',im_name,'_template_',num2str(temp_size_idx),'.mat');
+%         load(disp_addr);
+        % calc the RMSE        
+        RMSE{im_idx}(temp_size_idx) = calc_RMSE(groundtruth,double(local_disp_map));
+        
     end
+    
+    % save the data
+    out_filename = strcat('results/',t,'/rmse.mat');
+    save(out_filename, 'RMSE');
 end
-
-
-
 
 
 

@@ -17,6 +17,7 @@
 \usepackage{color}
 \usepackage{cancel}
 \usepackage{setspace}
+\usepackage{multirow}
 %\doublespacing
 % or:
 \onehalfspacing
@@ -220,7 +221,7 @@ We need aditional information to determine the distance of the ball. This inform
 \newpage
 \section{Depth with Stereo}
 \subsection{Disparity map explanation}
-Disparity (x-x') map shows the depth of the image. The depth of a point is inversely proportional to the difference in the distance of 2 corresponding image pixels. The farther the object - the less movement it undergoes if the camera center moves. Using the dislocation of each pixel relatively to its previous location, we build the disparity map. 
+Disparity (x-x') map shows the depth of the image. The depth of a point is inversely proportional to the difference in the distance of 2 corresponding image pixels. The farther the object - the less movement it undergoes if the camera moves. Using the dislocation of each pixel relatively to its previous location, we build the disparity map. 
 
 
 
@@ -229,7 +230,7 @@ The function was implemented - it can be found in 'calc\_SSD.m'. At first, the b
 
 
 \subsection{Finding the corresponding pixels}
-Rectification of the images reduces the number of the unknown parameters in the Excentric (E) matrix. We currently have no more rotation, only the translation of the camera center. This implies that the corresponding points have the same y coordinate (vertical / row number).
+Rectification of the images reduces the number of the unknown parameters in the Excentric (E) matrix. We currently have no more rotation, only the translation of the camera. This implies that the corresponding points have the same y coordinate (vertical / row number).
 \newline
 The function was written called 'find\_matching\_pixels', which does all of the mentioned in the question. It receives 2 images, an array of points in the first image, and the template size. It returns the array of points in the second image.
 
@@ -299,17 +300,51 @@ The function was executed on all of the examples, and all of the window sizes. T
 \end{minipage}
 \vskip 0.1in
 
-%% for Image 2, window sizes [5 11 21]:
 
-
-%% for Image 3, window sizes [5 11 21]:
+We can observe that for window size of 11 the performance is the best for visual experience. The window 5 is affected by noise too much. While the window size of 21 blurs the image too much. The problematic regions are the regions of uniform background, or those who change less in the X direction. The algorithm performs best on the edges, which are easier to detect using the SSD algorithm.
 
 Finding the RMSE for all 3 images and all 3 window sizes gives:
 
-%% Table 
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+Image number        & Filter size & RMSE  \\ \hline
+\multirow{3}{*}{03} & 5           & 9.79  \\ \cline{2-3} 
+                    & 11          & 6.89  \\ \cline{2-3} 
+                    & 21          & 4.57  \\ \hline
+\multirow{3}{*}{04} & 5           & 12.19 \\ \cline{2-3} 
+                    & 11          & 12.34 \\ \cline{2-3} 
+                    & 21          & 13.7  \\ \hline
+\multirow{3}{*}{07} & 5           & 12.6  \\ \cline{2-3} 
+                    & 11          & 12.73 \\ \cline{2-3} 
+                    & 21          & 14.37 \\ \hline
+\end{tabular}
+\end{table}
+From the RMSE calculations we can see that:
 
 
-We can observe that for window size of 11 the performance is the best. The window 5 is affected by noise too much. While the window size of 21 blurs the image too much. The problematic regions are the regions of uniform background, or those who change less in the X direction. The algorithm performs best on the edges, which are easier to detect using the SSD algorithm.
+
+
+\begin{enumerate}
+\item For the first image the smallest RMSE amount accounts for the largest filter size. But we have seen that the result is blurry. This happened because the maximum disparity value was set too high. The majority of disparities was calculated to be around 15 pixels in the histogram. So with the small filter size we have large presense of 'white' regions - those with disparity > 60.
+\item In both other images the RMSE value does not change much with the template size difference, although visually the results are different.
+\end{enumerate}
+
+Out of pure interest, The Max Disparity value was decreased to 30 (which is 60/2) and the test has been redone on the Image 03. The results found are the following:
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+Image number        & Filter size & RMSE  \\ \hline
+\multirow{3}{*}{03} & 5           & 5.99  \\ \cline{2-3} 
+                    & 11          & 4.33  \\ \cline{2-3} 
+                    & 21          & 3.1  \\ \hline
+\end{tabular}
+\end{table}
+We can observe that we could substantially decrease the error, but still the errors proportion remained the same, and the error is smallest for the largest filter size, because the amount of pixels who got the maximum value is still the same (we just decreased their value in half).
 
 
 \end{document}
