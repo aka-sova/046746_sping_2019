@@ -58,7 +58,7 @@ Technion - Israel Institute of Technology
 
 \section{Optical Flow Section}
 
-In Fig.~\ref{fig:100} we present the optical flow for $t=1$ and $N=16$. The arrows represent the optical flow for a section of $16 \times 16$ pixels. It is evident that only the moving cars between frames have optical flow; while the footage is noisy, the eigenvalue limit for $A^T A$ allows to filter that noise, even in the expense of ignoring some moving parts.
+In Fig.~\ref{fig:100} we present the optical flow for $t=1$ and $N=16$. The red arrows represent the optical flow for a section of $16 \times 16$ pixels. It is evident that only the moving cars between frames have optical flow; while the footage is noisy, the eigenvalue limit for $A^T A$ allows to filter that noise, even in the expense of ignoring some moving parts.
 
 \begin{figure}[!htbp]
 	\centering
@@ -86,11 +86,11 @@ In Fig.~\ref{fig:100} we present the optical flow for $t=1$ and $N=16$. The arro
 		\label{fig:105}
 	\end{subfigure}
 
-	\label{fig:100}
 	\caption{Optical flow for frames $k=10, 20, 30,40$ with parameters $t=1$, $N=16$.}
+	\label{fig:100}
 \end{figure}
 
-By lowering the eigenvalue lower limit to $t=0.1$ for Fig.~\ref{fig:300}, the optical flow is much more noisy and sensitive to the camera jitter. 
+By lowering the eigenvalue lower limit to $t=0.1$ for Fig.~\ref{fig:300}, the optical flow is much more noisy and sensitive to the camera jitter, specifically note the roads in the figure.
 
 \begin{figure}[!htbp]
 	\centering
@@ -118,11 +118,11 @@ By lowering the eigenvalue lower limit to $t=0.1$ for Fig.~\ref{fig:300}, the op
 		\label{fig:305}
 	\end{subfigure}
 	
-	\label{fig:300}
 	\caption{Optical flow for frames $k=10, 20, 30,40$ with parameters $t=0.1$, $N=16$.}
+	\label{fig:300}
 \end{figure}
 
-Setting the parameter $N=8$ increases the resolution of the optical flow segments, although with the cost of increased computational time and less data to work with per segment; increased resolution with optical flow requires a reduction in lower eigenvalue limit, as for smaller $A$ matrices the eigenvalue tend to be smaller as well. In Fig.~\ref{fig:400a} the optical flow is filtered out, while in Fig.~\ref{fig:400b} the optical flow shows similar results to Fig.~\ref{fig:100} although with higher resolution.
+Setting the parameter $N=8$ increases the resolution of the optical flow segments, although with the cost of increased computational time and less data to work with per segment; increased resolution with optical flow requires a reduction in lower eigenvalue limit, as for smaller $A$ matrices the eigenvalue tend to be smaller as well. In Fig.~\ref{fig:400a} the optical flow is filtered out, even legitimate sections with moving parts while in Fig.~\ref{fig:400b} the optical flow shows similar results to Fig.~\ref{fig:100} although with higher resolution.
 
 \begin{figure}[!htbp]
 	\centering
@@ -150,8 +150,8 @@ Setting the parameter $N=8$ increases the resolution of the optical flow segment
 		\label{fig:405}
 	\end{subfigure}
 	
-	\label{fig:400a}
 	\caption{Optical flow for frames $k=10, 20, 30,40$ with parameters $t=1$, $N=8$.}
+	\label{fig:400a}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -181,8 +181,8 @@ Setting the parameter $N=8$ increases the resolution of the optical flow segment
 		\label{fig:410}
 	\end{subfigure}
 	
-	\label{fig:400b}
 	\caption{Optical flow for frames $k=10, 20, 30,40$ with parameters $t=0.1$, $N=8$.}
+	\label{fig:400b}
 \end{figure}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.3)  3 JUN 2019 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.3)  6 JUN 2019 11:00
 entering extended mode
 **./cv_hw3.tex
 (cv_hw3.tex
@@ -959,13 +959,6 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 50.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-
-Package caption Warning: \label without proper reference on input line 89.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:100' on page 1 undefined on input line 61.
-
 <102.jpg, id=11, 680.5425pt x 631.35875pt>
 File: 102.jpg Graphic file (type jpg)
  <use 102.jpg>
@@ -990,13 +983,6 @@ File: 105.jpg Graphic file (type jpg)
 Package pdftex.def Info: 105.jpg used on input line 84.
 (pdftex.def)             Requested size: 181.18439pt x 168.0896pt.
 
-
-Package caption Warning: \label without proper reference on input line 121.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:300' on page 1 undefined on input line 93.
-
 <302.jpg, id=16, 680.5425pt x 631.35875pt>
 File: 302.jpg Graphic file (type jpg)
  <use 302.jpg>
@@ -1020,29 +1006,7 @@ File: 305.jpg Graphic file (type jpg)
  <use 305.jpg>
 Package pdftex.def Info: 305.jpg used on input line 116.
 (pdftex.def)             Requested size: 181.18439pt x 168.0896pt.
-
-
-Package caption Warning: \label without proper reference on input line 153.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:400a' on page 1 undefined on input line 125.
-
-
-Package caption Warning: \label without proper reference on input line 184.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:400b' on page 1 undefined on input line 125.
-
-
-Package caption Warning: \label without proper reference on input line 89.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:100' on page 1 undefined on input line 125.
-
-[1
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./102.jpg> <./103.jpg> <.
 /104.jpg> <./105.jpg>] [2 <./302.jpg> <./303.jpg> <./304.jpg> <./305.jpg>]
@@ -1105,20 +1069,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `cv_hw3.out' has not changed.
 (rerunfilecheck)             Checksum: 94CF1F25F56698CC43F3546A2750A23E;56.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  ) 
 Here is how much of TeX's memory you used:
  21461 strings out of 493323
- 392426 string characters out of 3139073
- 468372 words of memory out of 3000000
+ 392426 string characters out of 3139061
+ 468469 words of memory out of 3000000
  24572 multiletter control sequences out of 15000+200000
  11017 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,56p,549b,479s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,56p,592b,479s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/Mi
@@ -1126,7 +1086,7 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb>
-Output written on cv_hw3.pdf (4 pages, 941539 bytes).
+Output written on cv_hw3.pdf (4 pages, 906959 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
