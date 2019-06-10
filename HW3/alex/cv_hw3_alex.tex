@@ -101,7 +101,26 @@ P &= K [ R | t ] = [[KR]_{3X3} | [Kt]_{3X1} ]
 \end{align*}
 Why this works:
 \newline
-...
+Let us first denote the matrix which was changed upside down as: $\tilde{A}$, and the matrix which was changed BOTH upside down and left-right as $\tilde{\tilde{A}}$. 
+\newline
+In the original QR decomposition, $M = QR$, where R is the upper triangular matrix. To bring it to the left side, we use transpose on both sides: $$M^{T} = (QR)^{T} = R^{T}Q^{T}$$. But the triangular matrix is now lower triangular matrix, which is also switched left-to-right. We notice that if we flip $M^{T}$ matrix upside-down, $R^{T}$ matrix will require BOTH upside-down and left-right flip, and $Q^{T}$ matrix will require upside-down flip as well:
+$$\tilde{M^{T}} = \tilde{\tilde{R^{T}}}\tilde{Q^{T}}$$
+Now, the matrix $\tilde{\tilde{R^{T}}}$ is of the form of the right triangular matrix that we need.
+\newline
+So, if we need to do RQ decomposition on matrix A:
+
+\begin{enumerate}
+\item calculate the matrix: $M = \tilde{A^{T}}$
+\item Perform the QR  decomposition on M: $M = QR$   (in code: line 2)
+\item Perform transpose and flipud (and fliplr on $R^{T}$) (lines 3-4 for R, lines 6-7 for Q): $$\tilde{M^{T}} = \tilde{\tilde{R^{T}}}\tilde{Q^{T}}$$
+\item By looking back: $$\tilde{M^{T}} = A$$, which brings: $$A = \tilde{\tilde{R^{T}}}\tilde{Q^{T}}$$
+which is a multiplication of the upper triangular matrix and an orthogonal matrix
+\item Optional step (which was done in a given funtion - lines 9-11) - in an aim to make the diagonal values of the upper triangular matrix positive. It extracts the matrix of its diagonal values signs, multiply by them both R and Q matrix.\newline
+As a result, in $\tilde{\tilde{R^{T}}}$ matrix, the columns where a negative diagonal value was present before, will be multiplied by $-1$, and in $\tilde{Q^{T}}$, the rows of the same index will be multiplied by $-1$ as well. 
+This was done because focal length values inside intrinsic camera matrix are positive values.
+
+\end{enumerate}
+
 
 \subsection{Camera characteristics}
 To answer this question, we normalize the camera characteristics matrix K. Knowing that the item [3,3] =1, we divide the whole matrix my this value. K obtained:

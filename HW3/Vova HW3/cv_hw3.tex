@@ -17,6 +17,7 @@
 \usepackage{color}
 \usepackage{cancel}
 \usepackage{setspace}
+\usepackage{pdfpages}
 %\doublespacing
 % or:
 \onehalfspacing
@@ -46,6 +47,13 @@
 
 \begin{document}
 
+\begin{center}
+ \large Algorithms and Application in Computer Vision - 046746
+ \end{center}
+\begin{center}
+\large\textbf{Homework \#3}
+ \end{center}
+
 
 \begin{tabular}{l}
 \\
@@ -54,6 +62,8 @@
 Technion - Israel Institute of Technology
 \end{tabular}
 
+
+\newpage
 \vspace{2em}
 
 \section{Optical Flow Section}
@@ -184,6 +194,10 @@ Setting the parameter $N=8$ increases the resolution of the optical flow segment
 	\caption{Optical flow for frames $k=10, 20, 30,40$ with parameters $t=0.1$, $N=8$.}
 	\label{fig:400b}
 \end{figure}
+
+\AtEndDocument{\includepdf[pages=-]{cv_hw3_alex.pdf}}
+
+
 
 \end{document}
 
