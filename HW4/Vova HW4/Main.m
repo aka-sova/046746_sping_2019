@@ -63,11 +63,12 @@ RMSE_squared = zeros( 150 , 1 );
 
 eimage_large = eigenimages( subtracted_image / sqrt(150) , W_size );
 W_matrix = reshape( eimage_large , 243 * 320 , W_size );
+y_rep_train = zeros( W_size , 150 );
 
 for i = 1 : 1 : 150
     
-    y_rep = W_matrix' * reshape( subtracted_image( : , : , i ) , 243 * 320 , 1 );
-    reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep;
+    y_rep_train( : , i ) = W_matrix' * reshape( subtracted_image( : , : , i ) , 243 * 320 , 1 );
+    reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep_train( : , i );
     reconstructed = reshape( reconstructed , [ 243 , 320 ] );
 %     figure(301)
 %     imshow( uint8( reconstructed )  )
@@ -105,17 +106,19 @@ for i = 1 : 1 : 20
     subtracted_test_image( : , : , i ) = test_image( : , : , i ) - average_image;
 end
 
+y_rep_test = zeros( W_size , 20 );
+
 for i = 1 : 1 : 20
     
-    y_rep = W_matrix' * reshape( subtracted_test_image( : , : , i ) , 243 * 320 , 1 );
-    reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep;
+    y_rep_test( : , i ) = W_matrix' * reshape( subtracted_test_image( : , : , i ) , 243 * 320 , 1 );
+    reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep_test( : , i );
     reconstructed = reshape( reconstructed , [ 243 , 320 ] );
-    figure(401)
-    imshow( uint8( reconstructed )  )
-    figure(402)
-    imshow( uint8( test_image( : , : , i ) ) )
-    figure(403)
-    imshow( uint8( reshape( W_matrix * y_rep , [ 243 , 320 ] ) ) )
+%     figure(401)
+%     imshow( uint8( reconstructed )  )
+%     figure(402)
+%     imshow( uint8( test_image( : , : , i ) ) )
+%     figure(403)
+%     imshow( uint8( reshape( W_matrix * y_rep_test( : , i ) , [ 243 , 320 ] ) ) )
     
     normalized_test_image = test_image( : , : , i ) / ( max( test_image( : , : , i ) ) - min( test_image( : , : , i ) ) );
     normalized_reconstruction = reconstructed / ( max( reconstructed ) - min( reconstructed ) );
@@ -138,5 +141,22 @@ plot(Dr_RMSE)
 xlabel( 'Image number' )
 ylabel( 'Error' )
 legend( 'RMSE' , 'Dynamic range RMSE')
+
+% Classification;
+cls_model = fitcknn( y_rep_train' , train_face_id );
+prediction = predict( cls_model , y_rep_test' );
+
+% Measure success rates
+counter = 0;
+correct = 0;
+for i = 1 : 1 : 20
+    if face_id( i ) ~= 0 && face_id( i ) ~= -1
+        if prediction( i ) == face_id( i )
+            correct = correct + 1;
+        end
+        counter = counter + 1;
+    end
+end
+cls_success_precent = 100 * correct / counter;
 
 return;
