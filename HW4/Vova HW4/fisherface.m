@@ -72,13 +72,20 @@ S_w = reshape(sum(S_w_class,1), [25 25]); % [25 X 25]
 
 [evecs, evals] = eigs(S_b, S_w, c-1);
 
-W_fdp = (evecs(:,1)'*(S_w^(-1)*S_b))';
+% from the tutorial 11 - taking the V_max (maximum eigenvalue eigenvector)
+W_fld = (evecs(:,1)'*(S_w^(-1)*S_b))'; % [25 X 1]
+
+
+basis = W_fld; % what do i do with it?
+
+% W = W_Pca*W_fld; % ???   sizes?
+
 
 
 % project y vectors on the fisher basis (???)
 
 for i = 1 : 1 : 150 
-    y_rep_train_fisher(i) = W_fdp'*y_rep_train(:,i);
+    y_rep_train_fisher(i) = W_fld'*y_rep_train(:,i);
 end
 
 
