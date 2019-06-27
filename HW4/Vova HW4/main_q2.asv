@@ -1,0 +1,7 @@
+
+
+%% calculate the fisher basis
+
+
+% run the question 1 to load its data
+run('readYaleFaces.m');

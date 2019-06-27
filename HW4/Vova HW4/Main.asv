@@ -7,16 +7,12 @@ mkdir('imgs');
 addpath(genpath('eigenFaces'));
 run('readYaleFaces.m');
 test_image = zeros( 243 , 320 , 20 );
+image = reshape( A , [ 243 , 320 , 150 ]);
 
 for i = 1:20 % The image numbering is bad programing; put all images in a single variable
     testFileName = ['image' num2str(i)];
     test_image( : , : , i ) = double( eval ( testFileName ) );
 end
-
-clearvars image*
-
-image = reshape( A , [ 243 , 320 , 150 ]);
-
 
 %%
 % A - is the training set matrix where each column is a face image
@@ -60,8 +56,8 @@ for i = 1 : 1 : 5
     step_image = eimage( : , : , i );
     normalized_image = step_image / max( step_image(:) ) * 126; 
     imshow( uint8( normalized_image + 126 ) )
-    filename = sprintf('./imgs/biggest_ev_%1.0f.png',i);
-    saveas(fig, filename, 'png');
+    filename = sprintf('biggest_ev_%
+    saveas(fig, './imgs/average_face.png', 'png');
 end
 
 % Display and compute the representation error for the training images (3)
@@ -100,20 +96,17 @@ end
 Dr_RMSE = Dr_RMSE_squared.^.5;
 RMSE = RMSE_squared.^.5;
 
-fig = figure(310);
+figure(310)
 hold on
 plot(RMSE, 'r')
 plot(Dr_RMSE)
-grid;
 xlabel( 'Image number' )
 ylabel( 'Error' )
 legend( 'RMSE' , 'Dynamic range RMSE')
-filename = sprintf('./imgs/rmse_train.png');
-saveas(fig, filename, 'png');
 
 % Compute the representation error for the test images. Classify the test images and report error rate (4)
 
-clearvars Dr_RMSE_squared RMSE_squared Dr_RMSE RMSE
+clearvars Dr_RMSE_squared RMSE_squared
 
 subtracted_test_image = zeros( 243 , 320 , 20 );
 for i = 1 : 1 : 20
@@ -148,16 +141,13 @@ end
 Dr_RMSE = Dr_RMSE_squared.^.5;
 RMSE = RMSE_squared.^.5;
 
-fig = figure(410);
+figure(410)
 hold on
 plot(RMSE, 'r')
 plot(Dr_RMSE)
-grid;
 xlabel( 'Image number' )
 ylabel( 'Error' )
 legend( 'RMSE' , 'Dynamic range RMSE')
-filename = sprintf('./imgs/rmse_test.png');
-saveas(fig, filename, 'png');
 
 % Classification;
 cls_model = fitcknn( y_rep_train' , train_face_id );
