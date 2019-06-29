@@ -74,7 +74,8 @@ S_w = reshape(sum(S_w_class,1), [135 135]); % [135 X 135]
 [evecs, evals] = eigs(S_b, S_w, c-1);
 
 % from the tutorial 11
-W_fld = (evecs'*(S_w^(-1)*S_b))'; % [135 X 14]
+% W_fld = (evecs'*(S_w^(-1)*S_b))'; % [135 X 14]
+W_fld = evecs;
 
 W = W_matrix*W_fld;
 
