@@ -144,11 +144,18 @@ for i = 1 : 1 : 20
     if face_id( i ) ~= 0 && face_id( i ) ~= -1
         if prediction( i ) == face_id( i )
             correct = correct + 1;
+            answer = 'correct';
+        else
+            answer = 'false;';
         end
+        
+        fprintf('Face num. %1.0f the classification is %s\n', i, answer);
         counter = counter + 1;
     end
 end
 cls_success_precent = 100 * correct / counter;
+
+fprintf('Classification rate is %2.2f percent \n', cls_success_precent);
 
 
 
