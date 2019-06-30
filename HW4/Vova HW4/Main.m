@@ -51,7 +51,7 @@ for i = 1 : 1 : 150
     
 end
 
-% Compute eigenvectors and report first 5 eigen-faces (2)
+%% Compute eigenvectors and report first 5 eigen-faces (2)
 
 eimage = eigenimages( subtracted_image / sqrt(150) , 5 );
 
@@ -64,7 +64,7 @@ for i = 1 : 1 : 5
     saveas(fig, filename, 'png');
 end
 
-% Display and compute the representation error for the training images (3)
+%% Display and compute the representation error for the training images (3)
 
 W_size = 25;
 Dr_RMSE_squared = zeros( 150 , 1 );
@@ -74,17 +74,20 @@ eimage_large = eigenimages( subtracted_image / sqrt(150) , W_size );
 W_matrix = reshape( eimage_large , 243 * 320 , W_size );
 y_rep_train = zeros( W_size , 150 );
 
-for i = 1 : 1 : 150
+reconstruction_presentation = [ 10 , 20 , 30 ];
+
+for i = 1 : 1 : 150 % Compute reconstruction error and present few reconstruction results
     
     y_rep_train( : , i ) = W_matrix' * reshape( subtracted_image( : , : , i ) , 243 * 320 , 1 );
     reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep_train( : , i );
     reconstructed = reshape( reconstructed , [ 243 , 320 ] );
-%     figure(301)
-%     imshow( uint8( reconstructed )  )
-%     figure(302)
-%     imshow( uint8( image( : , : , i ) ) )
-%     figure(303)
-%     imshow( uint8( reshape( W_matrix * y_rep , [ 243 , 320 ] ) ) )
+    
+    if ismember( i , reconstruction_presentation )
+        figure(3001 + 10 * i)
+        imshow( uint8( reconstructed )  )
+        figure(3002 + 10 * i)
+        imshow( uint8( image( : , : , i ) ) )
+    end
     
     normalized_training_image = image( : , : , i ) / ( max( image( : , : , i ) ) - min( image( : , : , i ) ) );
     normalized_reconstruction = reconstructed / ( max( reconstructed ) - min( reconstructed ) );
@@ -100,6 +103,11 @@ end
 Dr_RMSE = Dr_RMSE_squared.^.5;
 RMSE = RMSE_squared.^.5;
 
+% Compute average error
+avg_Dr_RMSE_train = mean(Dr_RMSE);
+avg_RMSE_train = mean(RMSE);
+
+% Present error graphs
 fig = figure(310);
 hold on
 plot(RMSE, 'r')
@@ -111,9 +119,11 @@ legend( 'RMSE' , 'Dynamic range RMSE')
 filename = sprintf('./imgs/rmse_train.png');
 saveas(fig, filename, 'png');
 
-% Compute the representation error for the test images. Classify the test images and report error rate (4)
+%% Compute the representation error for the test images. Classify the test images and report error rate (4)
 
-clearvars Dr_RMSE_squared RMSE_squared Dr_RMSE RMSE
+clearvars Dr_RMSE_squared RMSE_squared Dr_RMSE RMSE reconstruction_presentation
+
+reconstruction_presentation = [ 15 , 1 , 10 ];
 
 subtracted_test_image = zeros( 243 , 320 , 20 );
 for i = 1 : 1 : 20
@@ -122,17 +132,18 @@ end
 
 y_rep_test = zeros( W_size , 20 );
 
-for i = 1 : 1 : 20
+for i = 1 : 1 : 20 % Compute reconstruction error and present few reconstruction results
     
     y_rep_test( : , i ) = W_matrix' * reshape( subtracted_test_image( : , : , i ) , 243 * 320 , 1 );
     reconstructed = reshape( average_image , [ 320 * 243 , 1] ) + W_matrix * y_rep_test( : , i );
     reconstructed = reshape( reconstructed , [ 243 , 320 ] );
-%     figure(401)
-%     imshow( uint8( reconstructed )  )
-%     figure(402)
-%     imshow( uint8( test_image( : , : , i ) ) )
-%     figure(403)
-%     imshow( uint8( reshape( W_matrix * y_rep_test( : , i ) , [ 243 , 320 ] ) ) )
+    
+    if ismember( i , reconstruction_presentation )
+        figure(4001 + i * 10)
+        imshow( uint8( reconstructed )  )
+        figure(4002 + i * 10)
+        imshow( uint8( test_image( : , : , i ) ) )
+    end
     
     normalized_test_image = test_image( : , : , i ) / ( max( test_image( : , : , i ) ) - min( test_image( : , : , i ) ) );
     normalized_reconstruction = reconstructed / ( max( reconstructed ) - min( reconstructed ) );
@@ -148,6 +159,12 @@ end
 Dr_RMSE = Dr_RMSE_squared.^.5;
 RMSE = RMSE_squared.^.5;
 
+% Compute average error
+
+avg_Dr_RMSE_test = mean(Dr_RMSE);
+avg_RMSE_test = mean(RMSE);
+
+% Present error graphs
 fig = figure(410);
 hold on
 plot(RMSE, 'r')
