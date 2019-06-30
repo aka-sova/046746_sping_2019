@@ -93,10 +93,10 @@ for i = 1 : 1 : 150 % Compute reconstruction error and present few reconstructio
     normalized_reconstruction = reconstructed / ( max( reconstructed ) - min( reconstructed ) );
     
     Dr_RMSE_squared( i ) = sum(sum( ( normalized_reconstruction...
-        - normalized_training_image ).^2 )) / ( 243 * 320 * 150 );
+        - normalized_training_image ).^2 )) / ( 243 * 320 );
     
     RMSE_squared( i ) = sum(sum( ( reconstructed / 255 ...
-        - image( : , : , i ) / 255 ).^2 )) / ( 243 * 320 * 150 );
+        - image( : , : , i ) / 255 ).^2 )) / ( 243 * 320 );
     
 end
 
@@ -149,10 +149,10 @@ for i = 1 : 1 : 20 % Compute reconstruction error and present few reconstruction
     normalized_reconstruction = reconstructed / ( max( reconstructed ) - min( reconstructed ) );
     
     Dr_RMSE_squared( i ) = sum(sum( ( normalized_reconstruction...
-        - normalized_test_image ).^2 )) / ( 243 * 320 * 150 );
+        - normalized_test_image ).^2 )) / ( 243 * 320 );
     
     RMSE_squared( i ) = sum(sum( ( reconstructed / 255 ...
-        - test_image( : , : , i ) / 255 ).^2 )) / ( 243 * 320 * 150 );
+        - test_image( : , : , i ) / 255 ).^2 )) / ( 243 * 320 );
     
 end
 
