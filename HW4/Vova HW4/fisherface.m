@@ -50,11 +50,11 @@ y_total_mean = mean(y_rep_train(:));
 
 for class=1:c
    relevant_items = label_train==class;
-   y_mean(:,1) = mean(y_rep_train(:,relevant_items),2); % [25 X 1]
+   y_mean(:,class) = mean(y_rep_train(:,relevant_items),2); % [135 X 1]
    
    % inside class scatter
    
-   y_mean_block = repmat(y_mean(:,1),1,10); % [25 X 10]
+   y_mean_block = repmat(y_mean(:,class),1,10); % [135 X 10]
    
    S_w_class(class,:,:) = (y_rep_train(:,relevant_items)-y_mean_block)*...
        (y_rep_train(:,relevant_items)-y_mean_block)';
@@ -62,32 +62,34 @@ for class=1:c
 
 end
 
-S_b = (y_mean(:)-y_total_mean)*...
-   (y_mean(:)-y_total_mean)';  % [25 X 25]
 
-S_w = reshape(sum(S_w_class,1), [25 25]); % [25 X 25]
+S_b = (y_mean-y_total_mean)*...
+   (y_mean-y_total_mean)';  % [135 X 135]
+
+S_w = reshape(sum(S_w_class,1), [135 135]); % [135 X 135]
 
 % now find the W_fld using the eigs function. Find 'c-1' biggest
 % eigenvalues and corresponding eigenvalues
 
 [evecs, evals] = eigs(S_b, S_w, c-1);
 
-% from the tutorial 11 - taking the V_max (maximum eigenvalue eigenvector)
-W_fld = (evecs(:,1)'*(S_w^(-1)*S_b))'; % [25 X 1]
+% from the tutorial 11
+% W_fld = (evecs'*(S_w^(-1)*S_b))'; % [135 X 14]
+W_fld = evecs;
+
+W = W_matrix*W_fld;
 
 
-basis = W_fld; % what do i do with it?
+basis = reshape(W, 243, 320 , c-1);
+meanvec = mean(basis,3);
 
-% W = W_Pca*W_fld; % ???   sizes?
+% plot all the basis:
 
-
-
-% project y vectors on the fisher basis (???)
-
-for i = 1 : 1 : 150 
-    y_rep_train_fisher(i) = W_fld'*y_rep_train(:,i);
-end
-
+% fig = figure();
+% for im=1:c-1
+%     subplot(5,3,im)
+%     imshow(W_pca(:,:,im),[]);
+% end
 
 
 
